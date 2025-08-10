@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard</title>
+</head>
+<body>
+
+<button id="add-expense" class="btn">Add Personal Expense</button>
+<br><br>
+
+<form id="form-delete" method="POST">
+    <label for="expense-id-field">Expense ID : </label>
+    <input type="text" id="expense-id-field" name="expenseId">
+    <br><br>
+
+    <input type="submit" value="Delete Expense">
+</form>
+
+<button id="view-expense">View Expenses</button>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Expense Date</th>
+        <th>Created At</th>
+    </tr>
+    </thead>
+    <tbody id="expenses-body"></tbody>
+</table>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
