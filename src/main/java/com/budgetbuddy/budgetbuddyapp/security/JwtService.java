@@ -17,7 +17,7 @@ import java.util.function.Function;
 public class JwtService {
 
     public static final String SECRET = "5367566859703373367639792F423F452848284D6251655468576D5A71347437";
-    public static final int JWT_EXP_TIME = 1000*60*1;
+    public static final int JWT_EXP_TIME = 1000*60*3;  // JWT will expire in 3 minutes
 
     public String generateToken(Long userId) { // Use email as username
         Map<String, Object> claims = new HashMap<>();
