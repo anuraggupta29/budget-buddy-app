@@ -2,6 +2,7 @@ package com.budgetbuddy.budgetbuddyapp.controller;
 
 import com.budgetbuddy.budgetbuddyapp.dto.requestdto.SignupRequestDto;
 import com.budgetbuddy.budgetbuddyapp.service.UserAuthService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,7 @@ public class SignupController {
     private UserAuthService userAuthService;
 
     @PostMapping("/signup")
+    @Operation(security = {})
     public ResponseEntity<?> signupUser(@RequestBody SignupRequestDto signupRequestDto){
         System.out.println("Signup Request Received");
 
