@@ -36,9 +36,9 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())  // Disable CSRF (only if you're using stateless APIs or JWT)
                 //.sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/**.html", "/**.css", "/**.js").permitAll()
+                    .requestMatchers("/js/**","/**.html", "/**.css", "/**.js").permitAll()
                     .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
-                    .requestMatchers("/signup", "/login").permitAll()
+                    .requestMatchers("/signup", "/login","/pexp","/dashboard").permitAll()
                     .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)

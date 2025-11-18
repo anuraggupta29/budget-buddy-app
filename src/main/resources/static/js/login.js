@@ -10,6 +10,8 @@ const formData = new FormData(form);
 const jsonObject = {};
 formData.forEach((value, key) => jsonObject[key] = value);
 
+console.log(jsonObject);
+
 // Send JSON to Spring Boot
 const response = await fetch("/login", {
     method: "POST",
